@@ -13,7 +13,7 @@ No sql 은 Not only SQL로 비관계형 데이터베이스 유형을 말한다. 
 데이터베이스를 선택하기 전에 CAP 이론을 확인하여 용도에 맞게 사용하는 것이 좋다고 생각한다. CAP 3가지를 모두 만족하는 경우는 불가능하다. 데이터 형식, 데이터 흐름을 고려하여 어떤 특징이 적합한지 확인하여 프로젝트에 적용하자. 
 
 ## Redis vs MongoDB
-| Feature | Reids | MongbDB |
+| Feature | Reids | MongoDB |
 |:--|:--|:--|
 |데이터 구조 | Key-value | Document| 
 |확장성 | 메모리 저장 | 디스크 저장| 
