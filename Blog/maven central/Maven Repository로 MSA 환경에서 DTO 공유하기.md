@@ -18,4 +18,38 @@ maven repository를 생성하기 위해 먼저 Jira 이슈를 생성해야 한�
 ![[Screenshot 2023-12-10 at 04.04.42.png]]
 repo를 생성하고 시키는 것을 완료하면 답변을 남겨준다. 답변은 아무렇게나 해도 괜찮은것 같다. 
 ![[Screenshot 2023-12-10 at 04.05.53.png]]
-시키는 것을 잘 하면 위와 같이 축하와 함께 maven central에 릴리즈 할 수 있도록 공식 문서로 안내해준다. 이제 
+시키는 것을 잘 하면 위와 같이 축하와 함께 maven central에 릴리즈 할 수 있도록 공식 문서로 안내해준다. 이제 gradle 프로젝트를 생성하고 배포하면 된다. 
+## Gradle 프로젝트 생성하기 
+![[Screenshot 2023-12-10 at 12.40.41.png]]
+intellij 에서 new project 선택 후 build system을 gradle로 설정하여 프로젝트를 생성해준다. 
+![[Screenshot 2023-12-10 at 12.50.01.png]]
+build.gradle로 빌드 후 publish 하게 된다. 배포하기 위해 필요한 파일을 만들어줘야 한다. 
+`publish-maven.gradle`
+`local.properties` (add gitignore)
+`publish.gradle` 
+[전체 프로젝트는 여기서 확인](https://github.com/lotteon2/BB-COMMON-REPOSITORY)
+### publish.gradle 
+```groovy
+ext {  
+    PUBLISH_GROUP_ID = ''  
+    PUBLISH_VERSION = (int)(((new Date().getTime()/1000) - 1451606400) / 10) // 버전 관리 귀찮아서 날짜로 대체 
+    PUBLISH_ARTIFACT_ID = 'blooming-blooms-utils'  
+    PUBLISH_DESCRIPTION = 'common repository for blooming blooms project'  
+    PUBLISH_URL = 'https://github.com/lotteon2/BB-COMMON-REPOSITORY'  
+    PUBLISH_LICENSE_NAME = 'GNU License'  
+    PUBLISH_LICENSE_URL = 'https://github.com/lotteon2/BB-COMMON-REPOSITORY/blob/main/LICENSE'  
+    PUBLISH_DEVELOPER_ID = 'nowgnas'  
+    PUBLISH_DEVELOPER_NAME = 'sangwon'  
+    PUBLISH_DEVELOPER_EMAIL = 'dev.nowgnas@gmail.com'  
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/lotteon2/BB-COMMON-REPOSITORY.git'  
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com:lotteon2/BB-COMMON-REPOSITORY.git'  
+    PUBLISH_SCM_URL = 'https://github.com/lotteon2/BB-COMMON-REPOSITORY/tree/main'  
+}
+```
+배포를 위한 정보들이다. 이 값들을 `publish-maven.gradle` 에서 사용하게 된다. 배포 버전은 배포할 때마다 매번 변경해도 되고 날짜에 따라 자동 생성되도록 해도 된다. (버전을 안바꾸고 올리면 적용이 잘 안되는 것 같아 날짜로 했습니다.)
+### publish-maven.gradle
+```groovy
+apply plugin: 'maven-publish'  
+apply plugin: 'signing'  
+apply from: 'publish.gradle'
+```
