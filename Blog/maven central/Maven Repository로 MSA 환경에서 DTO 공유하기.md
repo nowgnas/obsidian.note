@@ -47,9 +47,5 @@ ext {
 }
 ```
 배포를 위한 정보들이다. 이 값들을 `publish-maven.gradle` 에서 사용하게 된다. 배포 버전은 배포할 때마다 매번 변경해도 되고 날짜에 따라 자동 생성되도록 해도 된다. (버전을 안바꾸고 올리면 적용이 잘 안되는 것 같아 날짜로 했습니다.)
-### publish-maven.gradle
-```groovy
-apply plugin: 'maven-publish'  
-apply plugin: 'signing'  
-apply from: 'publish.gradle'
-```
+## GPG key 
+gradle 설정과 원하는 코드를 추가하였으면 이제 릴리즈를 해야한다. 릴리즈는 gpg key를 발급받아 siging을 통해 배포할 수 있다 
