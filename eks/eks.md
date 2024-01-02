@@ -37,14 +37,14 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - payment
 - store
 ---
-## cloud1
+## cloud
 - giftcard
--  giftcard-db
-## cloud2 
-- auth 
+- auth
 - delivery
-- notification
 - user
+-  giftcard-db
+## cloud2  
+- notification
 - wishlist
 ## cloud3
 - store
