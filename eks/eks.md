@@ -38,24 +38,17 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - store
 ---
 ## cloud
-- giftcard
 - auth
 - user
--  giftcard-db
 - user-db
 - orderquery
+- auth-db
 ## cloud2  
 - delivery
 - notification
 - wishlist
 - delivery-db
 - notification-db
-## cloud3
-- store
-- product
-- payment
-- order
-- store-db
 ## util 
 - zookeeper
 - kafka
@@ -64,10 +57,3 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - discovery
 - config
 - apigateway 
-## cloud4
-- auth-db
-- order-db
-## cloud5
-- wishlist-db
-- product-db
-- payment-db
