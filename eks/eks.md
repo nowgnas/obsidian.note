@@ -38,17 +38,14 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - store
 ---
 ## cloud
-- auth
 - user
 - user-db
 - orderquery
-- auth-db
-## cloud2  
 - delivery
-- notification
-- wishlist
+## cloud2  
+- auth
+- auth-db
 - delivery-db
-- notification-db
 ## util 
 - zookeeper
 - kafka
