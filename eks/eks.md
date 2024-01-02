@@ -42,12 +42,13 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - config
 - apigateway 
 - giftcard
-- user
+- orderquery
+-  giftcard-db
 ## cloud2 
 - auth 
 - delivery
 - notification
-- orderquery
+- user
 - wishlist
 ## cloud3
 - store
@@ -61,7 +62,6 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - redis
 - mongodb
 ## cloud4
-- giftcard-db
 - user-db
 - auth-db
 - delivery-db
