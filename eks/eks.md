@@ -43,7 +43,6 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - orderquery
 - delivery
 ## cloud2  
-- auth
 - auth-db
 - delivery-db
 ## util 
@@ -54,3 +53,4 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - discovery
 - config
 - apigateway 
+- wishlist-db
