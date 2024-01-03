@@ -13,3 +13,24 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - user-db
 - wishlist
 - wishlist-db
+- order query 
+## cloud2 
+- notification
+- notification-db
+- auth 
+- auth-db 
+## cloud3 
+- giftcard
+- giftcard-db
+- delivery
+- delivery-db 
+## cloud4
+- product 
+- product-db 
+- payment
+- payment-db 
+## cloud5 
+- store 
+- store-db 
+- order
+- order-db 
