@@ -13,7 +13,7 @@ https://jjikin.com/posts/terraform-aws-modules-%EA%B8%B0%EB%B0%98-EKS-%ED%99%98%
 - user-db
 - wishlist
 - wishlist-db
-- order query 
+- orderquery 
 ## cloud2 
 - notification
 - notification-db
